@@ -1,27 +1,20 @@
 <?php
+use App\Http\Controllers\VoitureController;
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    $titre = "accueil";
-    return view('index', compact('titre'));
-});
-Route::get('/a-propos', function () {
-    $titre= "a-propos";
-    return view('a-propos', compact('titre'));
-});
-Route::get('/service', function () {
-    $titre= "service";
-    return view('service', compact('titre'));
-});
+Route::get('/',[VoitureController::class,'index']
+);
+Route::get('/service',[VoitureController::class,'service']
+)->name("service");
+Route::get('/contact',[VoitureController::class,'contact']
+);
+
+Route::get('/a-propos',[VoitureController::class,'a-propos']
+);
+Route::get('/prix',[VoitureController::class,'prix']
+);
+Route::get('/nav',[VoitureController::class,'nav']
+);
+Route::post('/envoie',[VoitureController::class,'envoie']);

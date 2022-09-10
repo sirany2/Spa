@@ -10,11 +10,11 @@
                 <div class="navbar-nav m-auto py-0">
                     <a href="/" class="nav-item nav-link">Accueil</a>
                     <a href="/a-propos" class="nav-item nav-link">A propos</a>
-                    <a href="/service" class="nav-item nav-link">Services</a>
-                    <a href="price.html" class="nav-item nav-link">Prix</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="{{ route('service') }}" class="nav-item nav-link">Services</a>
+                    <a href="/prix" class="nav-item nav-link">Prix</a>
+                    <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary d-none d-lg-block">Commander</a>
+                <a href="" class="btn btn-primary d-none d-lg-block">Commande</a>
             </div>
         </nav>
     </div>
